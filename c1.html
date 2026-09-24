@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Question-Driven Actuality Unfolding — Section Map</title>
+<style>
+  :root{
+    --bg:#f5f7fb;
+    --card:#ffffff;
+    --text:#172033;
+    --muted:#5f6b7a;
+    --line:#dfe5ee;
+    --head:#18243a;
+    --head2:#eef2f7;
+    --accent:#3157d5;
+    --accent-soft:#eaf0ff;
+    --shadow:0 8px 24px rgba(20,32,55,.08);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:"Noto Sans Bengali","Noto Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+    line-height:1.65;
+  }
+  .page{
+    width:min(1800px,100%);
+    margin:0 auto;
+    padding:20px;
+  }
+  .hero{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:24px;
+    box-shadow:var(--shadow);
+    margin-bottom:20px;
+  }
+  h1,h2,h3{line-height:1.3;margin-top:0}
+  h1{font-size:clamp(1.45rem,3vw,2.2rem);margin-bottom:10px}
+  h2{font-size:clamp(1.2rem,2.4vw,1.6rem);margin:30px 0 12px}
+  p{margin:8px 0}
+  .intro{color:var(--muted)}
+  .table-wrap{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    overflow:hidden;
+  }
+  .table-scroll{
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+  }
+  table{
+    width:100%;
+    min-width:1500px;
+    border-collapse:collapse;
+    table-layout:fixed;
+  }
+  th,td{
+    border-bottom:1px solid var(--line);
+    border-right:1px solid var(--line);
+    padding:14px;
+    vertical-align:top;
+    text-align:left;
+    overflow-wrap:anywhere;
+    word-break:normal;
+  }
+  th:last-child,td:last-child{border-right:0}
+  th{
+    background:var(--head);
+    color:#fff;
+    font-weight:700;
+    position:sticky;
+    top:0;
+    z-index:2;
+  }
+  tbody tr:nth-child(even){background:#fbfcfe}
+  tbody tr:hover{background:var(--accent-soft)}
+  td:first-child{
+    font-weight:700;
+    color:var(--accent);
+  }
+  .movement{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:18px;
+    margin:12px 0;
+    box-shadow:0 4px 14px rgba(20,32,55,.05);
+  }
+  .movement strong{color:var(--accent)}
+  .flow{
+    font-weight:700;
+    color:var(--text);
+    padding:10px 12px;
+    background:var(--head2);
+    border-radius:10px;
+    margin-top:10px;
+  }
+  .note{
+    border-left:4px solid var(--accent);
+    background:var(--accent-soft);
+    padding:14px 16px;
+    border-radius:10px;
+    margin-top:18px;
+  }
+  ul{padding-left:1.25rem}
+  li{margin:6px 0}
+  .footer{
+    color:var(--muted);
+    font-size:.9rem;
+    text-align:center;
+    padding:24px 8px 8px;
+  }
+
+  /* Mobile: convert the wide table into stacked cards */
+  @media (max-width: 760px){
+    .page{padding:10px}
+    .hero{padding:17px;border-radius:14px}
+    .table-wrap{
+      background:transparent;
+      border:0;
+      box-shadow:none;
+      overflow:visible;
+    }
+    .table-scroll{overflow:visible}
+    table, thead, tbody, tr, th, td{
+      display:block;
+      width:100%;
+      min-width:0;
+    }
+    thead{
+      position:absolute;
+      width:1px;
+      height:1px;
+      padding:0;
+      margin:-1px;
+      overflow:hidden;
+      clip:rect(0,0,0,0);
+      white-space:nowrap;
+      border:0;
+    }
+    tbody tr{
+      background:var(--card)!important;
+      border:1px solid var(--line);
+      border-radius:15px;
+      margin:0 0 14px;
+      box-shadow:0 5px 16px rgba(20,32,55,.06);
+      overflow:hidden;
+    }
+    tbody td{
+      border:0;
+      border-bottom:1px solid var(--line);
+      padding:12px 13px;
+    }
+    tbody td:last-child{border-bottom:0}
+    tbody td::before{
+      content:attr(data-label);
+      display:block;
+      font-size:.78rem;
+      font-weight:800;
+      color:var(--muted);
+      margin-bottom:4px;
+      letter-spacing:.01em;
+      text-transform:none;
+    }
+    tbody td:first-child{
+      background:var(--head2);
+      color:var(--accent);
+      font-size:1rem;
+    }
+    .movement{padding:15px}
+  }
+
+  @media print{
+    body{background:#fff}
+    .page{width:100%;padding:0}
+    .hero,.table-wrap,.movement{box-shadow:none}
+    .table-scroll{overflow:visible}
+    table{min-width:0;font-size:9pt}
+    th{position:static}
+  }
+</style>
+</head>
+<body>
+<main class="page">
+  <section class="hero">
+    <h1>Question-Driven Actuality Unfolding — Section Map</h1>
+    <p class="intro">
+      এই টেবিলটি একটি প্রশ্ন থেকে পরবর্তী প্রশ্নকে logically necessary করে তোলার
+      জন্য তৈরি করা হয়েছে। প্রতিটি Section আগের Section-এর reasoning থেকে জন্ম নেয়:
+      <strong>Entry Question → Required Reasoning → Intermediate Realisation → Insufficiency → Exit Question</strong>।
+    </p>
+  </section>
+
+  <div class="table-wrap">
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Section</th>
+            <th>Entry Question</th>
+            <th>Required Reasoning</th>
+            <th>Intermediate Realisation</th>
+            <th>Insufficiency</th>
+            <th>Exit Question</th>
+            <th>What to discuss in this Section</th>
+            <th>Section Elements</th>
+            <th>Framework</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Section">1. কাজ, ইচ্ছা ও ফলাফল</td>
+            <td data-label="Entry Question">আমি যে কাজটা করতে চাই বা আমাকে যে কাজটা করতেই হবে, তাতে সাফল্য কি শুধু আমার ইচ্ছা ও চেষ্টার উপর নির্ভর করে?</td>
+            <td data-label="Required Reasoning">কাজ, চেষ্টা ও outcome-এর সম্পর্ক পরীক্ষা করা; একই রকম effort সবসময় একই result দেয় কি না দেখা।</td>
+            <td data-label="Intermediate Realisation">আমার ইচ্ছা ও চেষ্টা গুরুত্বপূর্ণ, কিন্তু outcome শুধু আমার চেষ্টা দিয়ে নির্ধারিত হয় না।</td>
+            <td data-label="Insufficiency">যদি শুধু আমার চেষ্টা outcome নির্ধারণ না করে, তাহলে আরও কী outcome-কে প্রভাবিত করছে?</td>
+            <td data-label="Exit Question">আমার ফলাফলকে আর কী কী নির্ধারণ করে?</td>
+            <td data-label="What to discuss in this Section">ব্যক্তিগত intention, action, effort এবং outcome-এর সম্পর্ক।</td>
+            <td data-label="Section Elements">Desired outcome; intention; action; effort; result; variation in result</td>
+            <td data-label="Framework">Intent → Action → Outcome → Outcome-এর অনিশ্চয়তা</td>
+          </tr>
+          <tr>
+            <td data-label="Section">2. Outcome-এর কারণ</td>
+            <td data-label="Entry Question">আমার ফলাফলকে আর কী কী নির্ধারণ করে?</td>
+            <td data-label="Required Reasoning">Outcome-এর সঙ্গে condition, factor, circumstance ও process-এর causal relationship পরীক্ষা করা।</td>
+            <td data-label="Intermediate Realisation">Outcome একটি বৃহত্তর causal process-এর মধ্যে তৈরি হয়।</td>
+            <td data-label="Insufficiency">শুধু factors-এর তালিকা জানলেই তাদের কার্যপ্রণালী বোঝা যায় না।</td>
+            <td data-label="Exit Question">এই বৃহত্তর process কীভাবে কাজ করে?</td>
+            <td data-label="What to discuss in this Section">Outcome-এর determining factors এবং কারণ-ফলের সম্পর্ক।</td>
+            <td data-label="Section Elements">Cause; condition; factor; interaction; consequence</td>
+            <td data-label="Framework">Outcome → Factors → Conditions → Causal Relationship</td>
+          </tr>
+          <tr>
+            <td data-label="Section">3. Outcome-producing process</td>
+            <td data-label="Entry Question">এই বৃহত্তর process কীভাবে কাজ করে?</td>
+            <td data-label="Required Reasoning">বিভিন্ন factor কীভাবে পরস্পরের সঙ্গে কাজ করে outcome তৈরি করে তা unfold করা।</td>
+            <td data-label="Intermediate Realisation">Outcome একটি কার্যপ্রক্রিয়ার ফল; তাই outcome বুঝতে process বুঝতে হবে।</td>
+            <td data-label="Insufficiency">Process বোঝা গেলেও প্রশ্ন থাকে—এই process-কে সংগঠিত বা চালিত করে কী?</td>
+            <td data-label="Exit Question">এই process-কে আসলে কী চালায়?</td>
+            <td data-label="What to discuss in this Section">বিচ্ছিন্ন ঘটনা নয়, underlying mechanism-এর প্রয়োজনীয়তা।</td>
+            <td data-label="Section Elements">Process; mechanism; interaction; sequence; operation</td>
+            <td data-label="Framework">Factors → Interaction → Mechanism → Outcome</td>
+          </tr>
+          <tr>
+            <td data-label="Section">4. Driving force</td>
+            <td data-label="Entry Question">এই process-কে আসলে কী চালায়?</td>
+            <td data-label="Required Reasoning">Mechanism-এর পেছনে operating force বা organising principle অনুসন্ধান করা।</td>
+            <td data-label="Intermediate Realisation">ঘটনার পেছনে একটি driving/operating principle বা force কাজ করতে পারে।</td>
+            <td data-label="Insufficiency">এই force কি শুধু আমার কাজের ক্ষেত্রের মধ্যে সীমাবদ্ধ, নাকি বৃহত্তর reality-তেও কাজ করে?</td>
+            <td data-label="Exit Question">আমার কাজ যে বৃহত্তর বাস্তবতার মধ্যে ঘটছে, সেটি কীভাবে operate করে?</td>
+            <td data-label="What to discuss in this Section">Mechanism বনাম driving force; local process থেকে larger system-এ যাওয়া।</td>
+            <td data-label="Section Elements">Driving force; operating principle; system; order; continuity</td>
+            <td data-label="Framework">Process → Mechanism → Driving Force → Larger System</td>
+          </tr>
+          <tr>
+            <td data-label="Section">5. বৃহত্তর বাস্তবতা</td>
+            <td data-label="Entry Question">আমার কাজ যে বৃহত্তর বাস্তবতার মধ্যে ঘটছে, সেটি কীভাবে operate করে?</td>
+            <td data-label="Required Reasoning">ব্যক্তির কাজকে বৃহত্তর বিশ্বচরাচরের সৃষ্টি, রক্ষা ও পরিচালনের ধারার মধ্যে দেখা।</td>
+            <td data-label="Intermediate Realisation">আমি বিচ্ছিন্ন reality-তে কাজ করছি না; আমার কাজ একটি বৃহত্তর operating reality-এর অংশ।</td>
+            <td data-label="Insufficiency">যদি আমি সেই reality-এর অংশ হই, তাহলে সেই reality-কে পরিচালনকারী force-এর সঙ্গে আমার কাজের সম্পর্ক কী?</td>
+            <td data-label="Exit Question">যে force এই বৃহত্তর reality-কে পরিচালনা করে, তার সঙ্গে আমার কাজের কী সম্পর্ক?</td>
+            <td data-label="What to discuss in this Section">ব্যক্তিগত জীবন ও বৃহত্তর reality-এর সম্পর্ক।</td>
+            <td data-label="Section Elements">Larger reality; creation; preservation; operation; individual participation</td>
+            <td data-label="Framework">Individual → Larger Reality → Operating Order → Individual Action</td>
+          </tr>
+          <tr>
+            <td data-label="Section">6. ব্যক্তিগত উদ্দেশ্য ও বৃহত্তর force</td>
+            <td data-label="Entry Question">যে force এই বৃহত্তর reality-কে পরিচালনা করে, তার সঙ্গে আমার কাজের কী সম্পর্ক?</td>
+            <td data-label="Required Reasoning">ব্যক্তিগত উদ্দেশ্য, চাওয়া, action এবং বৃহত্তর operating force-এর relationship পরীক্ষা করা।</td>
+            <td data-label="Intermediate Realisation">আমার কাজ ও ইচ্ছা বৃহত্তর reality-এর বাইরে নয়; সেগুলিও তার মধ্যেই operate করছে।</td>
+            <td data-label="Insufficiency">তাহলে আমার উদ্দেশ্য ও ইচ্ছা কি সেই বৃহত্তর কার্যপ্রবাহের সঙ্গে সম্পূর্ণ সম্পর্কহীন থাকতে পারে?</td>
+            <td data-label="Exit Question">আমার কাজের উদ্দেশ্য ও ব্যক্তিগত চাওয়া-পাওয়ার সঙ্গে সেই বৃহত্তর কার্যপ্রবাহের alignment কি গুরুত্বপূর্ণ?</td>
+            <td data-label="What to discuss in this Section">Personal purpose/desire বনাম larger operating reality।</td>
+            <td data-label="Section Elements">Purpose; desire; action; relationship; dependence; participation</td>
+            <td data-label="Framework">Larger Force → Individual Life → Purpose → Desire → Action</td>
+          </tr>
+          <tr>
+            <td data-label="Section">7. Alignment-এর প্রয়োজন</td>
+            <td data-label="Entry Question">আমার কাজের উদ্দেশ্য ও ব্যক্তিগত চাওয়া-পাওয়ার সঙ্গে সেই বৃহত্তর কার্যপ্রবাহের alignment কি গুরুত্বপূর্ণ?</td>
+            <td data-label="Required Reasoning">Alignment থাকলে বা না থাকলে system-এর সঙ্গে action-এর সম্পর্ক কীভাবে বদলায় তা পরীক্ষা করা।</td>
+            <td data-label="Intermediate Realisation">শুধু আমি কী চাই তা গুরুত্বপূর্ণ নয়; যে reality-এর মধ্যে চাইছি, তার সঙ্গে আমার চাওয়ার সম্পর্কও গুরুত্বপূর্ণ।</td>
+            <td data-label="Insufficiency">Alignment গুরুত্বপূর্ণ হলে কীভাবে বুঝব alignment আছে কি না?</td>
+            <td data-label="Exit Question">কীভাবে বুঝব আমার উদ্দেশ্য ও ইচ্ছা সেই বৃহত্তর কার্যপ্রবাহের সঙ্গে aligned কি না?</td>
+            <td data-label="What to discuss in this Section">Alignment কেন outcome-এর সঙ্গে সম্পর্কিত হতে পারে।</td>
+            <td data-label="Section Elements">Alignment; compatibility; coherence; mismatch; consequence</td>
+            <td data-label="Framework">Desired Purpose ↔ Larger Operating Reality → Alignment/Misalignment</td>
+          </tr>
+          <tr>
+            <td data-label="Section">8. Alignment শনাক্ত করার প্রয়োজন</td>
+            <td data-label="Entry Question">কীভাবে বুঝব আমার উদ্দেশ্য ও ইচ্ছা সেই বৃহত্তর কার্যপ্রবাহের সঙ্গে aligned কি না?</td>
+            <td data-label="Required Reasoning">Alignment-কে শুধু subjective feeling না ধরে তার observable consequence, pattern ও mismatch-এর লক্ষণ অনুসন্ধান করা।</td>
+            <td data-label="Intermediate Realisation">Alignment-এর বাস্তব প্রকাশ থাকার কথা; তাই alignment বোঝার একটি basis প্রয়োজন।</td>
+            <td data-label="Insufficiency">কিন্তু alignment বিচার করার awareness-ই যদি না থাকে, তাহলে নিজের ইচ্ছাকে কীভাবে যাচাই করব?</td>
+            <td data-label="Exit Question">নিজের ইচ্ছা ও উদ্দেশ্যের alignment বিচার করার awareness না থাকলে কী ঘটে?</td>
+            <td data-label="What to discuss in this Section">Alignment-এর criteria এবং awareness-এর প্রয়োজন।</td>
+            <td data-label="Section Elements">Indicators; criteria; awareness; observation; consequence</td>
+            <td data-label="Framework">Reality → Criteria → Observation → Alignment Assessment</td>
+          </tr>
+          <tr>
+            <td data-label="Section">9. Awareness-এর অভাব</td>
+            <td data-label="Entry Question">নিজের ইচ্ছা ও উদ্দেশ্যের alignment বিচার করার awareness না থাকলে কী ঘটে?</td>
+            <td data-label="Required Reasoning">Awareness না থাকলে মানুষ কোন ভিত্তিতে decision নেয়—নিজের desire, habit, social conditioning, লোকবিশ্বাস ইত্যাদি পরীক্ষা করা।</td>
+            <td data-label="Intermediate Realisation">Awareness না থাকলে নিজের ইচ্ছাকেই reality-এর মাপকাঠি ধরে নেওয়ার সম্ভাবনা তৈরি হয়।</td>
+            <td data-label="Insufficiency">নিজের ইচ্ছাই যদি মাপকাঠি হয়, তাহলে সেই ইচ্ছা reality-aligned কি না যাচাই হবে কীভাবে?</td>
+            <td data-label="Exit Question">আমি যা চাই, সেটাই কি সত্যিই আমার জন্য সঠিক—নাকি সেটিও যাচাই করা প্রয়োজন?</td>
+            <td data-label="What to discuss in this Section">Awareness gap থেকে belief-এর সমস্যা কীভাবে তৈরি হয়।</td>
+            <td data-label="Section Elements">Awareness gap; desire; assumption; conditioning; self-validation</td>
+            <td data-label="Framework">Awareness Gap → Unexamined Desire → Assumed Truth</td>
+          </tr>
+          <tr>
+            <td data-label="Section">10. Desire বনাম Actuality</td>
+            <td data-label="Entry Question">আমি যা চাই, সেটাই কি সত্যিই আমার জন্য সঠিক—নাকি সেটিও যাচাই করা প্রয়োজন?</td>
+            <td data-label="Required Reasoning">“আমি চাই” এবং “এটি বাস্তবতার সঙ্গে সামঞ্জস্যপূর্ণ”—এই দুই proposition আলাদা করা।</td>
+            <td data-label="Intermediate Realisation">কোনও কিছু আমি চাই বলেই তা আমার জন্য সঠিক বা reality-aligned হয়ে যায় না।</td>
+            <td data-label="Insufficiency">তাহলে ব্যক্তিগত ইচ্ছার যথার্থতা যাচাই করার মাপকাঠি কী?</td>
+            <td data-label="Exit Question">কোন মাপকাঠিতে আমার চাওয়া ও উদ্দেশ্যের যথার্থতা যাচাই করব?</td>
+            <td data-label="What to discuss in this Section">Desire-কে truth criterion হিসেবে গ্রহণ করার সমস্যা।</td>
+            <td data-label="Section Elements">Desire; truth; actuality; validity; verification</td>
+            <td data-label="Framework">Desire ≠ Truth → Verification Needed</td>
+          </tr>
+          <tr>
+            <td data-label="Section">11. Truth/Validity-এর মাপকাঠি</td>
+            <td data-label="Entry Question">কোন মাপকাঠিতে আমার চাওয়া ও উদ্দেশ্যের যথার্থতা যাচাই করব?</td>
+            <td data-label="Required Reasoning">বৃহত্তর reality-এর operating principles-এর সঙ্গে personal intention-এর সামঞ্জস্য পরীক্ষা করা।</td>
+            <td data-label="Intermediate Realisation">নিজের ইচ্ছাকে নিজেই ultimate criterion বানানো যথেষ্ট নয়।</td>
+            <td data-label="Insufficiency">কিন্তু বৃহত্তর reality-এর operating principle না জানলে alignment যাচাই করা সম্ভব নয়।</td>
+            <td data-label="Exit Question">তাহলে সেই বৃহত্তর reality-এর প্রকৃত operating principle কী?</td>
+            <td data-label="What to discuss in this Section">Personal criterion থেকে reality-based criterion-এ shift।</td>
+            <td data-label="Section Elements">Truth criterion; actuality; operating principle; verification</td>
+            <td data-label="Framework">Personal Desire → External Reality → Criterion → Validation</td>
+          </tr>
+          <tr>
+            <td data-label="Section">12. প্রকৃত Operating Principle</td>
+            <td data-label="Entry Question">সেই বৃহত্তর reality-এর প্রকৃত operating principle কী?</td>
+            <td data-label="Required Reasoning">সৃষ্টি, রক্ষা, পরিচালনা, balance, interaction ও consequence-এর recurring pattern পরীক্ষা করা।</td>
+            <td data-label="Intermediate Realisation">বৃহত্তর reality-কে বুঝতে তার underlying order/force/operating principle বুঝতে হবে।</td>
+            <td data-label="Insufficiency">Principle জানা গেলেও নিজের জীবন ও কাজের সঙ্গে তার সম্পর্ক কীভাবে স্থাপন করব?</td>
+            <td data-label="Exit Question">এই operating principle-এর সঙ্গে নিজের কাজ ও ইচ্ছাকে কীভাবে align করব?</td>
+            <td data-label="What to discuss in this Section">Proposed actuality/truth এবং তার evidential/logical basis।</td>
+            <td data-label="Section Elements">Operating rule; driving mechanism; purpose; balance; consequence</td>
+            <td data-label="Framework">Observation → Pattern → Principle → Verification</td>
+          </tr>
+          <tr>
+            <td data-label="Section">13. Alignment as conscious operation</td>
+            <td data-label="Entry Question">এই operating principle-এর সঙ্গে নিজের কাজ ও ইচ্ছাকে কীভাবে align করব?</td>
+            <td data-label="Required Reasoning">Personal purpose, desire, action ও consequence-কে বৃহত্তর operating logic-এর সঙ্গে তুলনা করা।</td>
+            <td data-label="Intermediate Realisation">Alignment শুধু ধারণা নয়; এটি সচেতনভাবে operate করার একটি process হতে পারে।</td>
+            <td data-label="Insufficiency">কিন্তু alignment-এর awareness না থাকলে এই process শুরুই হবে না।</td>
+            <td data-label="Exit Question">তাহলে এই alignment-এর awareness তৈরি করাই কি প্রথম প্রয়োজন?</td>
+            <td data-label="What to discuss in this Section">Alignment-এর practical meaning এবং operation।</td>
+            <td data-label="Section Elements">Assessment; alignment; decision; action; feedback</td>
+            <td data-label="Framework">Understand → Assess → Align → Act → Observe</td>
+          </tr>
+          <tr>
+            <td data-label="Section">14. Awareness as prerequisite</td>
+            <td data-label="Entry Question">এই alignment-এর awareness তৈরি করাই কি প্রথম প্রয়োজন?</td>
+            <td data-label="Required Reasoning">Awareness না থাকলে intention-action-consequence relationship দেখা যায় না; awareness থাকলে তা পরীক্ষা করা সম্ভব।</td>
+            <td data-label="Intermediate Realisation">নিজের ইচ্ছা, কাজ ও বৃহত্তর reality-এর সম্পর্ক সম্পর্কে awareness একটি মৌলিক prerequisite।</td>
+            <td data-label="Insufficiency">কিন্তু awareness নিজে outcome বদলায় না; তাকে decision ও action-এ ব্যবহার করতে হবে।</td>
+            <td data-label="Exit Question">Awareness-কে কীভাবে নিজের সিদ্ধান্ত ও কাজে ব্যবহার করব?</td>
+            <td data-label="What to discuss in this Section">Awareness থেকে conscious operation-এ transition।</td>
+            <td data-label="Section Elements">Awareness; discernment; decision; intervention</td>
+            <td data-label="Framework">Awareness → Assessment → Decision → Intervention</td>
+          </tr>
+          <tr>
+            <td data-label="Section">15. Awareness থেকে Operation</td>
+            <td data-label="Entry Question">Awareness-কে কীভাবে নিজের সিদ্ধান্ত ও কাজে ব্যবহার করব?</td>
+            <td data-label="Required Reasoning">Awareness → assessment → alignment → action → feedback-এর relationship তৈরি করা।</td>
+            <td data-label="Intermediate Realisation">Awareness-এর উদ্দেশ্য শুধু জানা নয়; নিজের operation-কে reality-এর সঙ্গে সামঞ্জস্যপূর্ণ করা।</td>
+            <td data-label="Insufficiency">একবার alignment করলেই কি যথেষ্ট? বাস্তবতা ও conditions বদলালে কী হবে?</td>
+            <td data-label="Exit Question">তাহলে alignment-কে কি একবারের সিদ্ধান্ত নয়, continuous process হিসেবে operate করতে হবে?</td>
+            <td data-label="What to discuss in this Section">Continuous alignment, monitoring, feedback এবং correction-এর প্রয়োজন।</td>
+            <td data-label="Section Elements">Monitoring; feedback; correction; re-alignment; learning loop</td>
+            <td data-label="Framework">Awareness → Align → Operate → Monitor → Learn → Re-align</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <section>
+    <h2>৫টি বৃহত্তর Intellectual Movement</h2>
+
+    <div class="movement">
+      <strong>Movement 1 — আমার কাজ থেকে Outcome</strong>
+      <div class="flow">আমি কাজ করি → outcome সবসময় আমার নিয়ন্ত্রণে নয় → outcome-এর causal process আছে → সেই process বুঝতে হবে।</div>
+    </div>
+
+    <div class="movement">
+      <strong>Movement 2 — Outcome থেকে Larger Reality</strong>
+      <div class="flow">Process-এর mechanism আছে → driving force আছে → আমার কাজ একটি বৃহত্তর operating reality-এর মধ্যে ঘটছে → তাই আমার কাজ সেই reality-এর সঙ্গে সম্পর্কিত।</div>
+    </div>
+
+    <div class="movement">
+      <strong>Movement 3 — Larger Reality থেকে Alignment</strong>
+      <div class="flow">আমি সেই reality-এর অংশ → আমার purpose/desire-এর সঙ্গে তার relationship গুরুত্বপূর্ণ → সেই relationship-এর নাম alignment → alignment বোঝার প্রয়োজন।</div>
+    </div>
+
+    <div class="movement">
+      <strong>Movement 4 — Alignment থেকে Awareness-এর প্রয়োজন</strong>
+      <div class="flow">Alignment বিচার করতে awareness দরকার → awareness না থাকলে নিজের desire-ই truth-এর মাপকাঠি হয়ে যায় → desire ≠ truth → reality-based criterion দরকার।</div>
+    </div>
+
+    <div class="movement">
+      <strong>Movement 5 — Truth থেকে Conscious Operation</strong>
+      <div class="flow">Reality-এর operating principle বুঝতে হবে → তার সঙ্গে purpose/desire align করতে হবে → alignment-এর awareness তৈরি করতে হবে → awareness-কে operation-এ আনতে হবে → feedback-এর মাধ্যমে continuous re-alignment করতে হবে।</div>
+    </div>
+
+    <div class="note">
+      <strong>মূল structural insight:</strong>
+      Truth আগে থেকে ঘোষণা না করে, রীডারকে reasoning-এর মধ্য দিয়ে এমন জায়গায় নিয়ে যাওয়া যেখানে আগের explanation আর যথেষ্ট থাকে না। সেই insufficiency থেকেই পরবর্তী প্রশ্ন জন্ম নেবে, এবং পরবর্তী concept logically necessary হয়ে উঠবে।
+    </div>
+  </section>
+
+  <div class="footer">Question-Driven Actuality Unfolding — One-to-One Intellectual Conversation</div>
+</main>
+</body>
+</html>
