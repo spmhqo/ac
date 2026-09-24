@@ -1,74 +1,54 @@
-Please create a new similar app with the following table:
-
-টেবল - Analysis
-
-১০টি কলামের তালিকা:
-
-১, টপিক 
-২, প্রশ্ন
-৩, ইস্যু 
-৪, রিজন / Diagnosis
-৫, সলিউসন
-৬, প্রসেস - কিসের ও কি?
-৭, রুম
-৮, উত্তরটা কি?
-
-৯, উত্তরে ব্যবহৃত সূত্র / নিয়ম কটা ও কি কি?
-
-[যেগুলো এই প্রশ্নের আমার যে উত্তর সেই উত্তরকে বুঝতে হলে জীবনের নিয়ম বা সত্য -র সিদ্ধান্ত আগে আমাকে মেনে নিতে হবে? (প্রিরিকুইজিট)]
-
-১০, সেই সিদ্ধান্ত গুলো মানবো কোন যুক্তিতে?
-
-[সূত্র / নিয়ম গুলো সত্য বলে স্বীকার করার ভিত্তি কি?]
-
-
-Also, please put this content above the form as the guideline for filling up the form in three separate sections.
-
-CONTENT
-
-সেকসেন এক
-
-তন্ত্র, পদ্ধতি, যন্ত্র, ও শক্তি 
-
-শক্তি বা তন্ত্রের গ্র্যাভিটেশনাল ফোর্স কাকে বলছি?
-
-কর্মসম্পাদন পদ্ধতি ও কর্মসম্পাদনের যন্ত্র - এই দুটোকে রক্ষণ ও পরিচালন করে যে ফোর্স।
-
-তন্ত্র কাকে বলছি?
-
-তন্ত্র হল কোনও কর্মকে যে কর্মসম্পাদনের পদ্ধতি, কর্মসম্পাদনের জন্য প্রয়োজনীয় যে সেটআপ বা স্ট্রাকচার বা যন্ত্র (ম্যাকানিজম) ও রক্ষণ-পরিচালনা করে যে শক্তি ভূমিকা গ্রহণ করে সেই পদ্ধতি, যন্ত্র, ও শক্তির শাস্ত্র বা বিজ্ঞান
-
-যন্ত্র কাকে বলছি?
-
-যে ম্যাকানিজম কোনও কর্মসম্পাদন পদ্ধতির জন্য দরকার হয়, সেই ম্যাকানিজমকে যন্ত্র বা মেসিন বলছি।
-
-কর্মপদ্ধতি কাকে বলছি?
-
-কর্মকে সম্পাদন করার পদ্ধতিটাকে কর্মপদ্ধতি বলছি।
-
-সেকসন দুই
-
-জরুরি একটা কথা 
-
-আমরা বিশ্বাস করি যে, ব্যক্তির ইচ্ছা ও ইচ্ছাপূরণী কর্মকান্ডের পিছনে থাকে ব্যক্তির নিজের মন-মানসিকতা বা সেই ব্যক্তির নিজের মন-মানসিকতার নেওয়া সিদ্ধান্ত।
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>টেবল - Analysis</title>
+<style>
+:root{font-family:"Noto Sans Bengali","Nirmala UI","Vrinda",sans-serif;color:#171717;background:#f4f5f7}*{box-sizing:border-box}body{margin:0;padding:24px}.app{max-width:1500px;margin:auto}h1{text-align:center;margin:0 0 18px;font-size:28px}.guidelines{display:grid;gap:12px;margin-bottom:18px}.guideline{background:#fff;border:1px solid #bbb;padding:16px 20px;line-height:1.75}.guideline h2{font-size:19px;margin:0 0 8px}.guideline p{margin:5px 0;white-space:pre-wrap}.toolbar{display:flex;gap:9px;align-items:center;flex-wrap:wrap;padding:12px;background:#fff;border:1px solid #ddd;margin-bottom:12px}button{font:inherit;border:0;border-radius:5px;padding:9px 13px;background:#185abc;color:#fff;cursor:pointer}.secondary{background:#555}.danger{background:#a52a2a}.hint{margin-left:auto;color:#555;font-size:13px}.table-wrap{overflow-x:auto;background:#fff;border:1px solid #222}table{border-collapse:collapse;width:100%;min-width:1500px;table-layout:fixed}th,td{border:1px solid #222;padding:8px;vertical-align:top}th{text-align:left;font-weight:600;height:175px;font-size:14px}th:nth-child(1){width:8%}th:nth-child(2){width:8%}th:nth-child(3){width:8%}th:nth-child(4){width:12%}th:nth-child(5){width:8%}th:nth-child(6){width:11%}th:nth-child(7){width:6%}th:nth-child(8){width:10%}th:nth-child(9){width:17%}th:nth-child(10){width:12%}td[contenteditable=true]{height:76px;white-space:pre-wrap;overflow-wrap:anywhere;outline:none}td[contenteditable=true]:focus{box-shadow:inset 0 0 0 2px #9ec5fe}.row-actions{display:flex;justify-content:flex-end;margin-top:12px}.foot{font-size:12px;color:#555;margin-top:10px}
+@media(max-width:700px){body{padding:12px}h1{font-size:23px}.hint{width:100%;margin:0}}
+@media print{@page{size:A3 landscape;margin:10mm}body{padding:0;background:#fff}.app{max-width:none}h1{font-size:19pt;margin:0 0 8pt}.guidelines{gap:6pt;margin-bottom:8pt}.guideline{padding:7pt 10pt;line-height:1.35;break-inside:avoid}.guideline h2{font-size:12pt;margin-bottom:4pt}.guideline p{font-size:8.5pt;margin:2pt 0}.screen-only,.row-actions,.foot{display:none!important}.table-wrap{border:0;overflow:visible}table{min-width:0;width:100%}th,td{font-size:7.5pt;padding:4pt}th{height:auto}td[contenteditable=true]{height:40pt}}
+</style>
+</head>
+<body><main class="app">
+<h1 contenteditable="true">টেবল - Analysis</h1>
+<div class="guidelines">
+<section class="guideline" aria-labelledby="section-one"><h2 id="section-one">সেকসেন এক — তন্ত্র, পদ্ধতি, যন্ত্র, ও শক্তি</h2>
+<p>শক্তি বা তন্ত্রের গ্র্যাভিটেশনাল ফোর্স কাকে বলছি?</p><p>কর্মসম্পাদন পদ্ধতি ও কর্মসম্পাদনের যন্ত্র - এই দুটোকে রক্ষণ ও পরিচালন করে যে ফোর্স।</p>
+<p>তন্ত্র কাকে বলছি?</p><p>তন্ত্র হল কোনও কর্মকে যে কর্মসম্পাদনের পদ্ধতি, কর্মসম্পাদনের জন্য প্রয়োজনীয় যে সেটআপ বা স্ট্রাকচার বা যন্ত্র (ম্যাকানিজম) ও রক্ষণ-পরিচালনা করে যে শক্তি ভূমিকা গ্রহণ করে সেই পদ্ধতি, যন্ত্র, ও শক্তির শাস্ত্র বা বিজ্ঞান</p>
+<p>যন্ত্র কাকে বলছি?</p><p>যে ম্যাকানিজম কোনও কর্মসম্পাদন পদ্ধতির জন্য দরকার হয়, সেই ম্যাকানিজমকে যন্ত্র বা মেসিন বলছি।</p><p>কর্মপদ্ধতি কাকে বলছি?</p><p>কর্মকে সম্পাদন করার পদ্ধতিটাকে কর্মপদ্ধতি বলছি।</p></section>
+<section class="guideline" aria-labelledby="section-two"><h2 id="section-two">সেকসন দুই — জরুরি একটা কথা</h2>
+<p>আমরা বিশ্বাস করি যে, ব্যক্তির ইচ্ছা ও ইচ্ছাপূরণী কর্মকান্ডের পিছনে থাকে ব্যক্তির নিজের মন-মানসিকতা বা সেই ব্যক্তির নিজের মন-মানসিকতার নেওয়া সিদ্ধান্ত।
 কিন্তু এটা বাস্তবিক সত্য নয়।
 মন-মানসিকতা আদৌ স্বাধীন বা self-run নয়।
-মন-মানসিকতা চালিত হয় আলাদা কিছু / অন্য কয়েকটি ইনভিজিবল ফ্যাক্টর বা বস্তুর দ্বারা।
+মন-মানসিকতা চালিত হয় আলাদা কিছু / অন্য কয়েকটি ইনভিজিবল ফ্যাক্টর বা বস্তুর দ্বারা.
 
 এই ইনভিজিবল ফ্যাক্টর বা বস্তু গুলোর অস্তিত্ব, উপস্থিতি, ও ভূমিকা সম্পর্কে আমরা aware থাকি না;
 ফলে এই ইনভিজিবল ফ্যাক্টর বা বস্তু গুলোর অস্তিত্ব, উপস্থিতি, ও ভূমিকা আমরা কনসিডার করি না, নিজেদের অজান্তেই ইগনোর করি
-অথচ তারা তাদের ভূমিকা পালন করে ও আমাদের করা কর্মের কর্মফলে তার প্রভাব পড়ে 
-এই ইনভিজিবল ফ্যাক্টর বা বস্তু গুলোর অস্তিত্ব, উপস্থিতি, ও ভূমিকা আমাদের কনসিডার বা কাউন্ট না করাটাই আমাদের জীবনের সমস্ত কর্মব্যর্থতা ও ভোগান্তির আসল ও একমাত্র কারণ হয়ে দাঁড়ায়।
-
-সেকসন তিন
-
-Get the Job Done. You Can’t Afford to Fail.
+অথচ তারা তাদের ভূমিকা পালন করে ও আমাদের করা কর্মের কর্মফলে তার প্রভাব পড়ে
+এই ইনভিজিবল ফ্যাক্টর বা বস্তু গুলোর অস্তিত্ব, উপস্থিতি, ও ভূমিকা আমাদের কনসিডার বা কাউন্ট না করাটাই আমাদের জীবনের সমস্ত কর্মব্যর্থতা ও ভোগান্তির আসল ও একমাত্র কারণ হয়ে দাঁড়ায়।</p></section>
+<section class="guideline" aria-labelledby="section-three"><h2 id="section-three">সেকসন তিন</h2>
+<p>Get the Job Done. You Can’t Afford to Fail.
 
 Failure-কে protect ও success-কে ensure করার কর্মপদ্ধতি কি?
 
-I - failure আসে, চেষ্টা ও কর্মপদ্ধতিতে ভুল না থাকা সত্বেও 
-Reason / Diagnosis - মানসিকতার সঙ্গে  বিশ্বচরাচরের গ্র্যাভিটেশনাল ফোর্সের 
-এ্যালাইনমেন্ট না থাকায় তা বিশ্বচরাচরের গ্র্যাভিটেশনাল ফোর্সের রি-অ্যাকসনের ইমপ্যাক্ট যা কর্মের কর্মফলকে ব্যর্থতায় পরিণত করে 
+I - failure আসে, চেষ্টা ও কর্মপদ্ধতিতে ভুল না থাকা সত্বেও
+Reason / Diagnosis - মানসিকতার সঙ্গে  বিশ্বচরাচরের গ্র্যাভিটেশনাল ফোর্সের
+এ্যালাইনমেন্ট না থাকায় তা বিশ্বচরাচরের গ্র্যাভিটেশনাল ফোর্সের রি-অ্যাকসনের ইমপ্যাক্ট যা কর্মের কর্মফলকে ব্যর্থতায় পরিণত করে
 S - মানসিকতার সঙ্গে  বিশ্বচরাচরের গ্র্যাভিটেশনাল ফোর্সের এ্যালাইনমেন্ট করানো
-P - মানসিকতার সঙ্গে  বিশ্বচরাচরের গ্র্যাভিটেশনাল ফোর্সের এ্যালাইনমেন্ট করানোর পদ্ধতি 
-R - ওয়ার্কশীট বা চেকলিস্ট বা অ্যাবালিসিস টেমপ্লেট।
+P - মানসিকতার সঙ্গে  বিশ্বচরাচরের গ্র্যাভিটেশনাল ফোর্সের এ্যালাইনমেন্ট করানোর পদ্ধতি
+R - ওয়ার্কশীট বা চেকলিস্ট বা অ্যাবালিসিস টেমপ্লেট।</p></section>
+</div>
+<div class="screen-only toolbar"><button id="add">+ সারি যোগ করুন</button><button class="secondary" id="blank">ফাঁকা সারি যোগ করুন</button><button onclick="window.print()">PDF / Print</button><button class="danger" id="clear">সব লেখা মুছুন</button><span class="hint">ঘরে ক্লিক করে লিখুন। PDF / Print চাপলে Save as PDF নির্বাচন করুন।</span></div>
+<div class="table-wrap"><table><thead><tr>
+<th>১. টপিক</th><th>২. প্রশ্ন</th><th>৩. ইস্যু</th><th>৪. রিজন / Diagnosis</th><th>৫. সলিউসন</th><th>৬. প্রসেস - কিসের ও কি?</th><th>৭. রুম</th><th>৮. উত্তরটা কি?</th><th>৯. উত্তরে ব্যবহৃত সূত্র / নিয়ম কটা ও কি কি?<br><br>[যেগুলো এই প্রশ্নের আমার যে উত্তর সেই উত্তরকে বুঝতে হলে জীবনের নিয়ম বা সত্য -র সিদ্ধান্ত আগে আমাকে মেনে নিতে হবে? (প্রিরিকুইজিট)]</th><th>১০. সেই সিদ্ধান্ত গুলো মানবো কোন যুক্তিতে?<br><br>[সূত্র / নিয়ম গুলো সত্য বলে স্বীকার করার ভিত্তি কি?]</th>
+</tr></thead><tbody id="rows"></tbody></table></div>
+<div class="screen-only row-actions"><button class="secondary" id="addBottom">+ আরও একটি সারি</button></div><div class="screen-only foot">এই ব্রাউজারে ফর্মের লেখা স্বয়ংক্রিয়ভাবে সংরক্ষিত হয়।</div>
+</main>
+<script>
+(()=>{const tbody=document.querySelector('#rows'),key='table-analysis-v1',count=10;
+function save(){localStorage.setItem(key,JSON.stringify([...tbody.rows].map(r=>[...r.cells].map(c=>c.innerHTML))))}
+function add(values=[]){const tr=document.createElement('tr');for(let i=0;i<count;i++){const td=document.createElement('td');td.contentEditable='true';td.setAttribute('aria-label',`কলাম ${i+1}`);td.innerHTML=values[i]||'';tr.append(td)}tbody.append(tr)}
+function render(){let saved;try{saved=JSON.parse(localStorage.getItem(key)||'null')}catch{saved=null}tbody.replaceChildren();if(Array.isArray(saved)&&saved.length)saved.forEach(add);else add()}
+tbody.addEventListener('input',save);document.querySelector('#add').onclick=()=>{add();save();tbody.lastElementChild.cells[0].focus()};document.querySelector('#addBottom').onclick=()=>document.querySelector('#add').click();document.querySelector('#blank').onclick=()=>{add();save()};document.querySelector('#clear').onclick=()=>{if(confirm('টেবিলের সব লেখা মুছে ফেলবেন?')){localStorage.removeItem(key);render()}};render();})();
+</script></body></html>
